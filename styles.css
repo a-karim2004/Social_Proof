@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fafafa;
+    font-family: Arial, sans-serif;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {   
+    width: 1000px;
+   
+}
+.top-section {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+.heading{
+    width: 32%;
+}
+.heading h1 {
+    color: #3d0a4e;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.heading p {
+    color: #777;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.ratings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    gap: 15px;
+    align-items: end;
+    
+    
+}
+
+
+.rating1, .rating2, .rating3{
+    background: #f5f1f7;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+}
+.rating2{
+    margin-right: 18px;
+}
+.rating3{
+    margin-right: 45px;
+}
+
+.rating1:hover, .rating2:hover, .rating3:hover {
+    background-color: #dbdada;
+    transition: background-color 0.3s ease;
+}
+
+
+.testimonial-card{
+
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    transition: transform 0.3s ease;
+}
+
+.rating span {
+    color:  orange;
+    font-weight: bold;
+    font-size: 1rem;
+}
+img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.dan{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.block1:hover, .block2:hover, .block3:hover {
+   background-color: #8f33ad;
+   transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.block1, .block2, .block3{ 
+    background-color: #4b0a63;
+    color: #FFF;
+    padding: 20px;
+    border-radius: 8px;
+    
+}
+
+
+.block3{
+    margin-top: 15px;
+}
+.block_head_tetle{
+    display: flex;
+    flex-direction: column;
+    
+}
+.status{
+    display: flex;
+    flex-direction: column;
+    color: #c9a2db;
+}
+.flex_img{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+
+
+
+ @media (max-width: 768px) {
+    
+    .top-section, .testimonials {
+        flex-direction: column;
+        align-items : center;
+    }
+
+    .testimonial-card {
+        width: 90vw;
+        max-width: 340px;
+    }
+    .card {
+        padding: 20px 5vw;
+    }
+    .dan{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+} 
