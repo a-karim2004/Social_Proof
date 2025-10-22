@@ -12,21 +12,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 
 }
 
 .card {   
-    width: 1000px;
-   
+ width: 1000px;   
 }
 .top-section {
     display: flex;
-    gap: 40px;
-    margin-bottom: 40px;
-    overflow: hidden;
-}
+    flex-direction: row;
+    gap: 60px;
+    margin-bottom: 40px;}
+    
+        
+
 .heading{
-    width: 32%;
+flex: 1;
 }
 .heading h1 {
     color: #3d0a4e;
@@ -41,13 +43,12 @@ body {
     font-weight: bold;
 }
 .ratings {
+    flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 60%;
     gap: 15px;
     align-items: end;
-    
     
 }
 
@@ -62,7 +63,8 @@ body {
     margin-right: 18px;
 }
 .rating3{
-    margin-right: 45px;
+    margin-right: 40px;
+    
 }
 
 .rating1:hover, .rating2:hover, .rating3:hover {
@@ -70,6 +72,9 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.fa-solid {
+    color: orange;
+}
 
 .testimonial-card{
 
@@ -80,11 +85,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-.rating span {
-    color:  orange;
-    font-weight: bold;
-    font-size: 1rem;
-}
+
 img{
     width: 40px;
     height: 40px;
@@ -136,7 +137,7 @@ img{
 
  @media (max-width: 768px) {
     
-    .top-section, .testimonials {
+    .card, .top-section {
         flex-direction: column;
         align-items : center;
     }
@@ -148,9 +149,72 @@ img{
     .card {
         padding: 20px 5vw;
     }
+
+    .top-section {
+        text-align: center;
+        gap: 20px;
+    }
+
     .dan{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 15px;
-}
+        display: flex;
+        flex-direction: column ;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .ratings{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .rat1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .rating2{
+        margin-right: 0;
+    }
+
+     .rat2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .rating3{
+        margin-right: 0;  
+    }
+
+     .rat3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    .block-content {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block1, .block2, .block3{
+        width: 60%;
+    }
+
 } 
+ @media (max-width: 425px) {
+
+    .block1, .block2, .block3{
+        width: 100%;
+    }
+
+} 
+
+
+
